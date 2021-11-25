@@ -8,7 +8,15 @@ In this project we will be leveraging the power of Machine learning in predictin
 
 ## CAR PRICE PREDICTION MODEL
 
-# Data Source: Kaggle
+### Data Source: Kaggle
+
+
+
+
+
+Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+
+```markdown
 
 1.Importing Dataset and libraries:
 
@@ -19,14 +27,14 @@ import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeRegressor 
 data = pd.read_csv("CarPrice.csv") 
-data.head()9
+data.head()
 The dataset contains 26 columns.
 2.Clean the data: Check and remove null values and to sum it up (cleaning the dataset): 
 
 data.isnull().sum()
-	This step shows that there are no null values in the dataset.
+This step shows that there are no null values in the dataset.
   
-3.	Check the features of the data: To check the features and to get insights into the kind of data we are dealing with.
+3.Check the features of the data: To check the features and to get insights into the kind of data we are dealing with.
 
 data.info() 
 print(data.describe()) 
@@ -44,12 +52,6 @@ plt.figure(figsize=(20, 15))
 correlations = data.corr()
 sns.heatmap(correlations, cmap="coolwarm", annot=True) 
 plt.show()
-
-
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
 Syntax highlighted code block
 
 # Header 1
