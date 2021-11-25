@@ -1,10 +1,51 @@
-## Welcome to GitHub Pages
+# Car Price Prediction
 
-You can use the [editor on GitHub](https://github.com/sharonanya/Car_price_prediction/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This is my first project in Machine Learning.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# Car Price Prediction with Machine Learning
 
-### Markdown
+In this project we will be leveraging the power of Machine learning in predicting the price of a car without the intervention of an agent or human. This model trained will predict the price of cars based on certain factors such as the goodwill of the brand of the car, the features of the car, horsepower, mileage and many more.
+
+## CAR PRICE PREDICTION MODEL
+
+# Data Source: Kaggle
+
+1.Importing Dataset and libraries:
+
+import numpy as np 
+import pandas as pd 
+import matplotlib.pyplot as plt 
+import seaborn as sns
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeRegressor 
+data = pd.read_csv("CarPrice.csv") 
+data.head()9
+The dataset contains 26 columns.
+2.Clean the data: Check and remove null values and to sum it up (cleaning the dataset): 
+
+data.isnull().sum()
+	This step shows that there are no null values in the dataset.
+  
+3.	Check the features of the data: To check the features and to get insights into the kind of data we are dealing with.
+
+data.info() 
+print(data.describe()) 
+data.CarName.unique()
+The price column in this dataset is the column whose values we are to predict. Let us view the distribution of the price column.
+4.	Visualize the Data:     
+              sns.set_style("whitegrid")
+             plt.figure(figsize=(15, 10)) 
+             sns.distplot(data.price) 
+             plt.show()
+Let us view the correlation value using a heatmap
+print(data.corr()) 
+
+plt.figure(figsize=(20, 15))
+correlations = data.corr()
+sns.heatmap(correlations, cmap="coolwarm", annot=True) 
+plt.show()
+
+
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
